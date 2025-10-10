@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 17:46:38 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/10 15:36:12 by lsalkic          ###   ########.fr       */
+/*   Created: 2025/10/10 15:27:01 by lsalkic           #+#    #+#             */
+/*   Updated: 2025/10/10 16:46:12 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <string.h>
 
-size_t	ft_strlen(const char *s)
+void	ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (s[i])
+	while (i < n)
 	{
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
-	return (i);
+	return (dest);
 }
 
 // int	main(void)
 // {
-// 	char	*s;
-// 	size_t	len;
-
-// 	s = "hilfe";
-// 	len = ft_strlen(s);
-// 	printf("%ld", len);
 // }

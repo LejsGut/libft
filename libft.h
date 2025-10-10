@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/08 17:46:38 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/10 15:36:12 by lsalkic          ###   ########.fr       */
+/*   Created: 2025/10/08 20:25:51 by lsalkic           #+#    #+#             */
+/*   Updated: 2025/10/08 20:28:05 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#ifndef LIBFT_H
+# define LIBFT_H
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
+# include <stdint.h>
+# include <stdio.h>
+# include <unistd.h>
 
-	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
-}
+int		ft_strlen(const char *s);
+void	*ft_memset(void *s, int c, size_t n);
 
-// int	main(void)
-// {
-// 	char	*s;
-// 	size_t	len;
-
-// 	s = "hilfe";
-// 	len = ft_strlen(s);
-// 	printf("%ld", len);
-// }
+#endif
