@@ -26,13 +26,28 @@ size_t	ft_strlen(const char *s)
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t j;
+	size_t f;
+	size_t length_src;
+	size_t length_dest;
 
 	j = 0;
-	if (dest > size)
+	f = 0;
+	length_src = ft_strlen(src);
+	length_dest = ft_strlen(dest);
+	if (size == 0)
+		return (size + length_src);
+	if (length_dest >= size)
+		return (size + length_src);
+	while (dest[j] != '\0')
+		j++;
+	while (j < size - 1 && f < length_src )
 	{
-		return (ft_strlen(dest) + ft_strlen(src))
+		dest[j] = src[f];
+		j++;	
+		f++;
 	}
-	while (j < size)
-	{
-	}
+	dest[j] = '\0';
+	return (length_dest + length_src);
 }
+
+//size gesamtgroesse von dest 
