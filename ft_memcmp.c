@@ -1,30 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lejs <lejs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/10 15:27:01 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/12 15:53:18 by lejs             ###   ########.fr       */
+/*   Created: 2025/10/12 14:19:05 by lejs              #+#    #+#             */
+/*   Updated: 2025/10/12 14:19:06 by lejs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-void	ft_memcpy(void *dest, const void *src, size_t n)
-{
-	int	i;
-
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i++;
-	}
-	return (dest);
-}
-
-// int	main(void)
-// {
-// }
