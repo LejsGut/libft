@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lejs <lejs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 17:57:28 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/10 18:07:11 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/13 19:17:15 by lejs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,29 @@ size_t	ft_strlen(const char *s)
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t j;
-
-	j = 0;
+	size_t  len_src;
+	size_t i;
+	
+	len_src = ft_strlen(src);
+	i = 0;
 	if (size == 0)
+		return (len_src);
+	if (size > len_src) //if size has more space than src
 	{
-		return (ft_strlen(src));
+		while (src[i]) 
+		{
+			dest[i] = src[i]; // copy src to dest
+			i++;
+		}
 	}
-	while (j < size - 1 && src[j])
+	else
 	{
-		dest[j] = ((const unsigned char *)src)[j];
-		j++;
+		while (size - 1 > i)
+		{
+			dest[i] = src[i];
+			i++;
+		}	
 	}
-	dest[j] = 0;
-	return (ft_strlen(src));
+	dest[i] = '\0';
+	return (len_src);
 }
