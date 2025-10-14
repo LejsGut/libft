@@ -1,3 +1,4 @@
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -15,7 +16,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
 	while (s[i])
@@ -28,9 +29,9 @@ size_t	ft_strlen(const char *s)
 // int	main(void)
 // {
 // 	char	*s;
-// 	size_t	len;
+// 	int		len;
 
 // 	s = "hilfe";
 // 	len = ft_strlen(s);
-// 	printf("%ld", len);
+// 	printf("%i", len);
 // }
