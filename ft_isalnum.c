@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 16:52:44 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/08 17:46:02 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/16 14:52:52 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,21 @@ int	ft_isalnum(int c)
 		return (0);
 }
 
-int	main(void)
-{
-	int		i;
-	char	*str;
+// int	main(void)
+// {
+// 	int		i;
+// 	char	*str;
 
-	i = 0;
-	str = "abhj7(*&^$)";
-	while (str[i] != '\0')
-	{
-		if (ft_isalnum(str[i]))
-		{
-			printf("1");
-		}
-		else
-			printf("0");
-		i++;
-	}
-}
+// 	i = 0;
+// 	str = "abhj7(*&^$)";
+// 	while (str[i] != '\0')
+// 	{
+// 		if (ft_isalnum(str[i]))
+// 		{
+// 			printf("1");
+// 		}
+// 		else
+// 			printf("0");
+// 		i++;
+// 	}
+// }
