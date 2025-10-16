@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:14:11 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/14 19:48:16 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/16 12:31:19 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,31 @@
 int	ft_atoi(const char *nptr)
 {
 	int	i;
-	int	digit;
 	int	number;
+	int	minus_count;
 
 	i = 0;
 	number = 0;
-	while (nptr[i])
+	while ((nptr[i] == ' ') || (nptr[i] >= 9 && nptr[i] <= 13))
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		while (nptr[i] <= ' ') // waehrend nptr[i] whitespace ist ueberspring
-			return (0);
-		if ((nptr[i] == '-' || nptr[i] == '+') && !(nptr[i++] >= '0'
-				&& nptr[i++] <= '9') || !(nptr[i] >= '0' && nptr[i] <= '9'))
-			return (0);
-		while (nptr[i] >= '0' && nptr[i] <= '9')
-		{
-			digit = nptr[i] - '0';
-			number = number * 10 + digit;
-		}
+		if (nptr[i++] == '-')
+			minus_count = 1;
+	}
+	if (nptr[i] && minus_count == 1 &&)
+	{
+		/* code */
+	}
+	if (nptr[i] < '0' || nptr[i] > '9')
+		return (0);
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		number = number * 10 + (nptr[i] - '0');
 		i++;
 	}
+	if (minus_count == 1)
+		number = number * -1;
+	return (number);
 }
-
-// uebersrpingt whitespace danach entweder + oder - sonst tot
+noch spaeter
