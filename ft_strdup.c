@@ -6,14 +6,14 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:00:45 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/16 12:35:37 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/16 16:58:28 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <string.h>
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	int i;
 
