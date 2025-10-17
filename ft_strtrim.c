@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:14:12 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/17 18:37:58 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/17 18:54:06 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,25 @@ char	*ft_strtrim(char const *s1, char const *set)
 	count = 0;
 	if (!s1 || !set)
 		return (NULL);
-	while (is_in_set(s1[i++], set) && s1[i])
+	while (s1[i] && is_in_set(s1[i++], set))
+	{
 		count++;
+		i++;
+	}
 	copy_i = i;
 	while (s1[i])
 		i++;
-	while (is_in_set(s1[i--], set))
+	i--;
+	while (i >= copy_i && is_in_set(s1[i], set))
+	{
 		count++;
+		i--;
+	}
 	new_s = malloc(ft_strlen(s1) - count + 1);
 	if (!new_s)
 		return (NULL);
 	i = 0;
-	while (s1[copy_i] < ft_strlen(s1))
+	while (copy_i < (int)ft_strlen(s1) - (count - (copy_i)))
 		new_s[i++] = s1[copy_i++];
 	new_s[i] = '\0';
 	return (new_s);
