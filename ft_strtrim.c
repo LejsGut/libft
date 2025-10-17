@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 12:00:45 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/17 14:39:12 by lsalkic          ###   ########.fr       */
+/*   Created: 2025/10/17 15:14:12 by lsalkic           #+#    #+#             */
+/*   Updated: 2025/10/17 16:13:57 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
-char	*ft_strdup(const char *s)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	if (s == NULL)
-		return (NULL);
-	while (s[i])
-		i++;
-	char *new = (char *)malloc(i + 1);
-	if (new == NULL)
-		return (NULL);
-	i = 0;
-	while (s[i])
-	{
-		new[i] = s[i];
-		i++;
-	}
-	new[i] = '\0';
-	return (new);
 }
