@@ -6,15 +6,17 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 20:25:51 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/16 16:34:06 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/17 17:16:14 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdbool.h>
 # include <stdint.h>
 # include <stdio.h>
+# include <stdlib.h>
 # include <unistd.h>
 
 int		ft_strlen(const char *s);
