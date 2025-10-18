@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:13:45 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/18 11:18:26 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/18 20:01:37 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	write(fd, s, ft_strlen(s) + 1);
+	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }

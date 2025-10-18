@@ -6,13 +6,11 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:14:11 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/18 17:54:46 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/18 19:52:28 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 int	ft_atoi(const char *nptr)
 {

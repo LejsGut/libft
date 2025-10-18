@@ -6,7 +6,7 @@
 #    By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 18:49:45 by jdreissi          #+#    #+#              #
-#    Updated: 2025/10/18 18:39:35 by lsalkic          ###   ########.fr        #
+#    Updated: 2025/10/18 19:57:28 by lsalkic          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,6 @@ SRCS =	ft_atoi.c \
 		ft_striteri.c \
 		ft_strjoin.c \
 		ft_strlcat.c \
-		ft_strlcpy.c \
 		ft_strlcpy.c \
 		ft_strlen.c \
 		ft_strmapi.c \

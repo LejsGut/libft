@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:00:45 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/18 18:54:53 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/18 20:10:37 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strdup(const char *s)
 	char	*new;
 
 	i = 0;
-	if (s == NULL)
-		return (NULL);
 	while (s[i])
 		i++;
 	new = (char *)malloc(i + 1);

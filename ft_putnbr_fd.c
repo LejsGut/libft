@@ -6,13 +6,13 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 11:19:48 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/18 18:59:08 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/18 19:56:02 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_amount(int n)
+static int	ft_amount(int n)
 {
 	int	count;
 
@@ -28,7 +28,7 @@ int	ft_amount(int n)
 	return (count);
 }
 
-void	if_smaller_zero(int n, char *new)
+static void	if_smaller_zero(int n, char *new)
 {
 	int	i;
 
