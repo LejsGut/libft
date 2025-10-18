@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 19:37:51 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/18 18:56:12 by lsalkic          ###   ########.fr       */
+/*   Created: 2025/10/18 13:41:38 by lsalkic           #+#    #+#             */
+/*   Updated: 2025/10/18 19:00:32 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+char	**ft_split(char const *s, char c)
+{
+	int	i;
+
+	i = 0;
+	if (s == 0)
+		return (NULL);
+}
+
+char	*in_a_word(char const *s, char c)
 {
 	int	i;
 
 	i = 0;
 	while (s[i])
 	{
-		f(i, &s[i]);
-		i++;
+		while (s[i] == c)
+			i++;
 	}
+	return (&s[i]);
 }

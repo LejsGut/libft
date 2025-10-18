@@ -2,24 +2,22 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+
+/*                                                    +:+ +:+         +:+     */
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 15:00:14 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/16 16:47:14 by lsalkic          ###   ########.fr       */
+/*   Created: 2025/10/18 18:37:55 by lsalkic           #+#    #+#             */
+/*   Updated: 2025/10/18 18:39:02 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int		i;
+	size_t	i;
 	char	*new_s;
-	int		s_len;
-	int		j;
+	size_t	s_len;
+	size_t	j;
 
 	i = 0;
 	j = 0;

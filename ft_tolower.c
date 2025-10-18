@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lejs <lejs@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 14:41:10 by lejs              #+#    #+#             */
-/*   Updated: 2025/10/11 14:43:30 by lejs             ###   ########.fr       */
+/*   Updated: 2025/10/18 18:53:28 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-// macht das zeichen klein
-int ft_tolower(int c)
-{   
-    if (c >= 65 && c <= 90)
-    {
-        c +=32;
-        return (c);
-    }
-    else
-        return (c);
+#include "libft.h"
+
+int	ft_tolower(int c)
+{
+	if (c >= 65 && c <= 90)
+	{
+		c += 32;
+		return (c);
+	}
+	else
+		return (c);
 }

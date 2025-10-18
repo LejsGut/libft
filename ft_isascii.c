@@ -6,13 +6,13 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 17:18:52 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/08 17:45:33 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/18 17:32:02 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 	{

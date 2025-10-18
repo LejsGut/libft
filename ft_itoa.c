@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 19:15:41 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/18 13:19:43 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/18 19:00:00 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	ft_amount(int n)
 	count++;
 	return (count);
 }
+
 char	*if_n_is_zero(char *new, int n)
 {
 	new = malloc(2);
@@ -37,6 +38,7 @@ char	*if_n_is_zero(char *new, int n)
 	new[1] = '\0';
 	return (new);
 }
+
 void	if_smaller_zero(int n, char *new)
 {
 	int	i;
@@ -53,9 +55,9 @@ char	*ft_itoa(int n)
 	int		last_digit;
 
 	i = ft_amount(n);
+	new = malloc(ft_amount(n));
 	if (n == 0)
 		return (if_n_is_zero(new, n));
-	new = malloc(ft_amount(n));
 	if (!new)
 		return (NULL);
 	if_smaller_zero(n, new);
@@ -71,10 +73,9 @@ char	*ft_itoa(int n)
 	}
 	return (new);
 }
-#include <limits.h>
 
-int	main(void)
-{
-	printf("Ergebnis ft_itoa %s", ft_itoa(0));
-	return (0);
-}
+// int	main(void)
+// {
+// 	printf("Ergebnis ft_itoa %s", ft_itoa(0));
+// 	return (0);
+// }

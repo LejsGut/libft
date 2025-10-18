@@ -6,11 +6,11 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 17:35:56 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/08 17:46:13 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/18 16:07:17 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isprint(char c)
 {

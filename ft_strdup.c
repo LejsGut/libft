@@ -6,23 +6,23 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:00:45 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/17 14:39:12 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/18 18:54:53 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
-	int i;
+	int		i;
+	char	*new;
 
 	i = 0;
 	if (s == NULL)
 		return (NULL);
 	while (s[i])
 		i++;
-	char *new = (char *)malloc(i + 1);
+	new = (char *)malloc(i + 1);
 	if (new == NULL)
 		return (NULL);
 	i = 0;

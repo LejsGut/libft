@@ -6,10 +6,12 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:14:11 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/16 12:31:19 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/18 17:54:46 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 int	ft_atoi(const char *nptr)
@@ -27,10 +29,6 @@ int	ft_atoi(const char *nptr)
 		if (nptr[i++] == '-')
 			minus_count = 1;
 	}
-	if (nptr[i] && minus_count == 1 &&)
-	{
-		/* code */
-	}
 	if (nptr[i] < '0' || nptr[i] > '9')
 		return (0);
 	while (nptr[i] >= '0' && nptr[i] <= '9')
@@ -42,4 +40,9 @@ int	ft_atoi(const char *nptr)
 		number = number * -1;
 	return (number);
 }
-noch spaeter
+
+// int	main(void)
+// {
+// 	printf("%d\n", atoi("-999999999999999"));
+// 	printf("%d\n", ft_atoi("-999999999999999"));
+// }

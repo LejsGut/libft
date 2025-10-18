@@ -6,15 +6,15 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 18:17:05 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/10 16:14:55 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/18 17:56:59 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:14:12 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/17 18:56:14 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/18 19:07:39 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ char	is_in_set(char c, char const *set)
 		i++;
 	}
 	return (false);
+}
+
+int	cut_away(char const *s1, char const *set)
+{
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
