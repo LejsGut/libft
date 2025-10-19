@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 20:25:51 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/18 20:33:40 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/19 11:45:35 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*strchr(const char *s, int c);
-// char	**ft_split(char const *s, char c);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);
@@ -55,5 +54,6 @@ int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_atoi(const char *nptr);
+char	**ft_split(char const *s, char c);
 
 #endif
