@@ -6,7 +6,7 @@
 #    By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 18:49:45 by jdreissi          #+#    #+#              #
-#    Updated: 2025/10/19 11:33:31 by lsalkic          ###   ########.fr        #
+#    Updated: 2025/10/19 11:55:12 by lsalkic          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ SRCS =	ft_atoi.c \
 		ft_strrchr.c \
 		ft_substr.c \
 		ft_tolower.c \
-		ft_toupper.c 
+		ft_toupper.c \
 
 O_FILES = $(SRCS:.c=.o)
 

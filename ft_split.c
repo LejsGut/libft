@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 13:41:38 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/19 11:50:20 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/19 15:45:59 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,11 @@ int	new_malloc(char **words, int i, int length)
 
 int	fill(char **words, char const *s, char c)
 {
-	int	i;
 	int	length;
 	int	j;
 
-	i = 0;
 	j = 0;
-	while (s[i])
+	while (*s)
 	{
 		length = 0;
 		while (*s && *s == c)
@@ -50,12 +48,13 @@ int	fill(char **words, char const *s, char c)
 		}
 		if (length > 0)
 		{
-			if (new_malloc(words, i, length + 1))
+			if (new_malloc(words, j, length + 1))
 				return (1);
+			ft_strlcpy(words[j], s - length, length + 1);
+			j++;
 		}
-		ft_strlcpy(words[j], s - length, length + 1);
-		j++;
 	}
+	words[j] = NULL;
 	return (0);
 }
 
@@ -80,28 +79,27 @@ size_t	nbr_words(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	word;
+	size_t	number_of_words;
 	char	**words;
 
 	if (s == NULL)
 		return (NULL);
-	word = nbr_words(s, c);
-	words = malloc(word + 1 * sizeof(*words));
+	number_of_words = nbr_words(s, c);
+	words = malloc((number_of_words + 1) * sizeof(*words));
 	if (!words)
 		return (NULL);
-	words[word] = NULL;
 	if (fill(words, s, c))
 		return (NULL);
 	return (words);
 }
 
-int	main(void)
-{
-	char *s = "---hello---world---how-------are--you-";
+// int	main(void)
+// {
+// 	char *s = "      split       this for   me  !       ";
 
-	char **v = ft_split(s, '-');
-	while (*v)
-	{
-		printf("%s\n", *v++);
-	}
-}
+// 	char **v = ft_split(s, ' ');
+// 	while (*v)
+// 	{
+// 		printf("%s\n", *v++);
+// 	}
+// }
