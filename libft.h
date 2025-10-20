@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 20:25:51 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/19 15:42:16 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/19 16:13:46 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
-void	ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	ft_bzero(void *s, size_t n);
 char	*ft_strdup(const char *s);
 int		ft_toupper(int c);

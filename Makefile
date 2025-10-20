@@ -6,7 +6,7 @@
 #    By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 18:49:45 by jdreissi          #+#    #+#              #
-#    Updated: 2025/10/19 11:55:12 by lsalkic          ###   ########.fr        #
+#    Updated: 2025/10/19 17:04:08 by lsalkic          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,4 +68,4 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: all fclean
+re: fclean all
