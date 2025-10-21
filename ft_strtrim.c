@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:14:12 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/20 19:37:05 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/20 20:51:21 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ size_t	ft_end(char const *s1, char const *set)
 	}
 	return (bmount);
 }
+
 char	*all_together(char const *s1, char const *set)
 {
 	size_t	all;
@@ -83,6 +84,7 @@ char	*all_together(char const *s1, char const *set)
 		trimmed[new_len] = '\0';
 	return (trimmed);
 }
+
 size_t	len(char const *s1, char const *set)
 {
 	size_t	all;
