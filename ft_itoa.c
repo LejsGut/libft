@@ -6,7 +6,7 @@
 /*   By: lsalkic <lsalkic@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 19:15:41 by lsalkic           #+#    #+#             */
-/*   Updated: 2025/10/18 19:55:35 by lsalkic          ###   ########.fr       */
+/*   Updated: 2025/10/21 14:55:34 by lsalkic          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ static int	ft_amount(int n)
 
 static char	*if_n_is_zero(char *new, int n)
 {
+	(void)n;
 	new = malloc(2);
-	new = malloc(ft_amount(n));
 	if (!new)
 		return (NULL);
 	new[0] = '0';
@@ -41,11 +41,8 @@ static char	*if_n_is_zero(char *new, int n)
 
 static void	if_smaller_zero(int n, char *new)
 {
-	int	i;
-
-	i = 0;
 	if (n < 0)
-		new[i] = '-';
+		new[0] = '-';
 }
 
 char	*ft_itoa(int n)
@@ -54,10 +51,10 @@ char	*ft_itoa(int n)
 	int		i;
 	int		last_digit;
 
-	i = ft_amount(n);
-	new = malloc(ft_amount(n));
 	if (n == 0)
-		return (if_n_is_zero(new, n));
+		return (if_n_is_zero(NULL, n));
+	i = ft_amount(n);
+	new = malloc(i);
 	if (!new)
 		return (NULL);
 	if_smaller_zero(n, new);
@@ -68,7 +65,7 @@ char	*ft_itoa(int n)
 		n = n / 10;
 		if (last_digit < 0)
 			last_digit = -last_digit;
-		new[i - 2] = last_digit + '0';
+		new[i - 2] = (char)(last_digit + '0');
 		i--;
 	}
 	return (new);
